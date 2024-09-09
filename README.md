@@ -45,11 +45,16 @@ Matplotlib & Seaborn: Data visualization.
 
 SMOTE: Balancing the dataset through synthetic oversampling.
 
-Results
-Best Model: Random Forest achieved the highest accuracy (74%) and balanced performance across sentiment classes.
-Insights: Positive sentiments were more frequent in the dataset. Negative sentiments were harder to classify, but Random Forest handled this challenge better than other models.
+Results:
 
-Visualization Impact: Helped in identifying trends, common words, and customer concerns within the dataset.
+Without Cross Validation:
+Logistic Regression: The accuracy of the logistic regression model is about 70%. It shows balanced performance with constant precision, recall, and F1-score in all three sentiment classes. In contrast to good sentiments, it has a little trouble categorising negative sentiments.
+Linear SVM: With an accuracy of roughly 71%, the linear support vector machine (SVM) model performs better than logistic regression. It performs better in terms of recall and precision when classifying both positive and negative emotions, although it excels most at classifying pleasant emotions. This demonstrates how well the model can divide sentiment classes inside the feature space.
+Decision Tree: The accuracy of the decision tree model is approximately 68%. Its accuracy and recall for neutral thoughts are reasonable, but when it comes to negative sentiments, it performs poorly overall. The models inferior performance could be attributed to overfitting, as evidenced by the differences in recall and precision scores across sentiment classes.
+Random Forest: The accuracy of the random forest model is about 69%. Robust performance is demonstrated by the balanced precision, recall, and F1-score across emotion classes. But just like the decision tree model, it has trouble categorizing negative emotions, which lowers the precision 17 score for this class. Despite this, compared to individual decision trees, the random forest model performs better overall due to its ensemble aspect, which helps reduce overfitting.
 
-Conclusion
-This project demonstrates the application of machine learning to extract actionable insights from customer reviews. The Random Forest model proved most effective in sentiment analysis, providing balanced performance across sentiment categories. These findings can help businesses make data-driven decisions, improve customer satisfaction, and strategize their offerings.
+With Cross Validation:
+Logistic Regression: The logistic regression model performs well in sentiment classification, with an accuracy of 0.70 and a mean cross-validation score of about 0.70. It consistently demonstrates a capacity to categories sentiments by maintaining balanced precision, recall, and F1-scores across sentiment classes.
+The linear SVM model performs well in sentiment classification, with a mean cross-validation score of around 0.71 and an accuracy of 0.71. It exhibits great precision, recall, and F1-scores across sentiment classes, particularly for positive thoughts. This indicates that sentiment classes can be effectively separated in the feature space, as well as good generalization to previously encountered data.
+Despite having a mean cross-validation score of around 0.70, the decision tree model's accuracy is significantly lower at 0.63, indicating moderate performance in sentiment categorization. It struggles with negative emotions, resulting in lower precision, recall, and F1-scores in this class. Furthermore, its accuracy is lower than other models, indicating a restricted ability to identify sentiment complexity.
+Random Forest: With a mean cross-validation score of around 0.73 and an accuracy of 0.74, the random forest model does well in sentiment classification. It maintains a balanced precision, recall, and F1-score across sentiment classes, showing strong and consistent results.
