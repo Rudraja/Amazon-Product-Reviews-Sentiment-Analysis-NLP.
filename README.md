@@ -23,11 +23,16 @@ Logistic Regression: Used for binary classification of sentiments.
 Support Vector Machine (SVM): Identified sentiment classes with a higher degree of separation in feature space.
 Decision Tree: Captured non-linear relationships but struggled with overfitting.
 Random Forest: Performed the best in terms of accuracy and handling noisy data, especially after cross-validation.
-5. Model Evaluation
+
+6. Model Evaluation
 Metrics Used: Accuracy, precision, recall, and F1-score for each model.
+
 Cross-validation: 5-fold cross-validation was applied to ensure models generalize well to unseen data.
+
 Random Forest: Achieved an accuracy of 74% with balanced precision and recall, making it the best-performing model.
+
 Tools & Technologies
+
 Programming Language: Python
 Libraries:
 NLTK: Text preprocessing and sentiment analysis.
@@ -35,6 +40,7 @@ Pandas: Data manipulation and analysis.
 Scikit-learn: Machine learning model development and evaluation.
 Matplotlib & Seaborn: Data visualization.
 SMOTE: Balancing the dataset through synthetic oversampling.
+
 Results
 Best Model: Random Forest achieved the highest accuracy (74%) and balanced performance across sentiment classes.
 Insights: Positive sentiments were more frequent in the dataset. Negative sentiments were harder to classify, but Random Forest handled this challenge better than other models.
