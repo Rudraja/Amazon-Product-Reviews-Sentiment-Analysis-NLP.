@@ -48,13 +48,57 @@ SMOTE: Balancing the dataset through synthetic oversampling.
 Results:
 
 Without Cross Validation:
-Logistic Regression: The accuracy of the logistic regression model is about 70%. It shows balanced performance with constant precision, recall, and F1-score in all three sentiment classes. In contrast to good sentiments, it has a little trouble categorising negative sentiments.
-Linear SVM: With an accuracy of roughly 71%, the linear support vector machine (SVM) model performs better than logistic regression. It performs better in terms of recall and precision when classifying both positive and negative emotions, although it excels most at classifying pleasant emotions. This demonstrates how well the model can divide sentiment classes inside the feature space.
-Decision Tree: The accuracy of the decision tree model is approximately 68%. Its accuracy and recall for neutral thoughts are reasonable, but when it comes to negative sentiments, it performs poorly overall. The models inferior performance could be attributed to overfitting, as evidenced by the differences in recall and precision scores across sentiment classes.
-Random Forest: The accuracy of the random forest model is about 69%. Robust performance is demonstrated by the balanced precision, recall, and F1-score across emotion classes. But just like the decision tree model, it has trouble categorizing negative emotions, which lowers the precision 17 score for this class. Despite this, compared to individual decision trees, the random forest model performs better overall due to its ensemble aspect, which helps reduce overfitting.
+### Results (Without Cross Validation)
 
+- **Logistic Regression**:
+  - Accuracy: ~70%.
+  - Balanced performance across all sentiment classes.
+  - Struggles with classifying negative sentiments.
+  - Consistent precision, recall, and F1-score across positive and neutral sentiments.
+
+- **Linear SVM**:
+  - Accuracy: ~71%.
+  - Performs better than logistic regression, especially in classifying both positive and negative sentiments.
+  - Excels at classifying positive emotions.
+  - Superior ability to separate sentiment classes in the feature space.
+
+- **Decision Tree**:
+  - Accuracy: ~68%.
+  - Decent precision and recall for neutral sentiments.
+  - Struggles with negative sentiments, leading to overall poor performance.
+  - Likely overfitting, seen through fluctuating recall and precision across sentiment classes.
+
+- **Random Forest**:
+  - Accuracy: ~69%.
+  - Balanced precision, recall, and F1-score across all sentiment classes.
+  - Struggles with categorizing negative sentiments, reducing precision for this class.
+  - Performs better than a single decision tree due to ensemble technique, minimizing overfitting issues.
+    
 With Cross Validation:
-Logistic Regression: The logistic regression model performs well in sentiment classification, with an accuracy of 0.70 and a mean cross-validation score of about 0.70. It consistently demonstrates a capacity to categories sentiments by maintaining balanced precision, recall, and F1-scores across sentiment classes.
-The linear SVM model performs well in sentiment classification, with a mean cross-validation score of around 0.71 and an accuracy of 0.71. It exhibits great precision, recall, and F1-scores across sentiment classes, particularly for positive thoughts. This indicates that sentiment classes can be effectively separated in the feature space, as well as good generalization to previously encountered data.
-Despite having a mean cross-validation score of around 0.70, the decision tree model's accuracy is significantly lower at 0.63, indicating moderate performance in sentiment categorization. It struggles with negative emotions, resulting in lower precision, recall, and F1-scores in this class. Furthermore, its accuracy is lower than other models, indicating a restricted ability to identify sentiment complexity.
-Random Forest: With a mean cross-validation score of around 0.73 and an accuracy of 0.74, the random forest model does well in sentiment classification. It maintains a balanced precision, recall, and F1-score across sentiment classes, showing strong and consistent results.
+### Results (With Cross Validation)
+
+- **Logistic Regression**:
+  - Accuracy: 0.70
+  - Mean Cross-Validation Score: 0.70
+  - Balanced precision, recall, and F1-scores across all sentiment classes.
+  - Consistent performance in sentiment classification.
+
+- **Linear SVM**:
+  - Accuracy: 0.71
+  - Mean Cross-Validation Score: 0.71
+  - Excellent precision, recall, and F1-scores, particularly for positive sentiments.
+  - Effective separation of sentiment classes in the feature space.
+  - Good generalization to new data.
+
+- **Decision Tree**:
+  - Accuracy: 0.63
+  - Mean Cross-Validation Score: 0.70
+  - Moderate performance in sentiment categorization.
+  - Struggles with negative sentiments, leading to lower precision, recall, and F1-scores for this class.
+  - Lower accuracy compared to other models, indicating limited ability to handle sentiment complexity.
+
+- **Random Forest**:
+  - Accuracy: 0.74
+  - Mean Cross-Validation Score: 0.73
+  - Strong and consistent results with balanced precision, recall, and F1-scores across sentiment classes.
+  - Best overall performance among the models.
