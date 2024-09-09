@@ -36,14 +36,20 @@ Tools & Technologies
 Programming Language: Python
 Libraries:
 NLTK: Text preprocessing and sentiment analysis.
+
 Pandas: Data manipulation and analysis.
+
 Scikit-learn: Machine learning model development and evaluation.
+
 Matplotlib & Seaborn: Data visualization.
+
 SMOTE: Balancing the dataset through synthetic oversampling.
 
 Results
 Best Model: Random Forest achieved the highest accuracy (74%) and balanced performance across sentiment classes.
 Insights: Positive sentiments were more frequent in the dataset. Negative sentiments were harder to classify, but Random Forest handled this challenge better than other models.
+
 Visualization Impact: Helped in identifying trends, common words, and customer concerns within the dataset.
+
 Conclusion
 This project demonstrates the application of machine learning to extract actionable insights from customer reviews. The Random Forest model proved most effective in sentiment analysis, providing balanced performance across sentiment categories. These findings can help businesses make data-driven decisions, improve customer satisfaction, and strategize their offerings.
